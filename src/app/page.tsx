@@ -96,6 +96,8 @@ function buildWhatsAppUrl(message: string) {
 
 export default function Home() {
   const [form, setForm] = useState<LeadForm>(initialForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
 
   const quickMessage = useMemo(
     () =>
@@ -109,11 +111,26 @@ export default function Home() {
     setForm((current) => ({ ...current, [key]: value }));
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (!form.consent) {
       alert("Para enviar a triagem, autorize o contato e o tratamento dos dados informados.");
+      return;
+    }
+
+    const website = String(new FormData(event.currentTarget).get("website") || "");
+    setIsSubmitting(true);
+    setSubmitStatus("");
+    const response = await fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...form, website })
+    });
+    const result = await response.json().catch(() => ({}));
+    setIsSubmitting(false);
+    if (!response.ok) {
+      setSubmitStatus(result.error || "Não foi possível registrar sua triagem. Tente novamente.");
       return;
     }
 
@@ -130,6 +147,8 @@ export default function Home() {
     ].join("\n");
 
     window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
+    setSubmitStatus("Triagem registrada. Abrimos o WhatsApp para continuar o atendimento.");
+    setForm(initialForm);
   }
 
   return (
@@ -416,6 +435,7 @@ export default function Home() {
           </div>
 
           <form className="lead-form" onSubmit={handleSubmit}>
+            <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <div className="field-grid">
               <div className="field">
                 <label htmlFor="name">Nome</label>
@@ -475,10 +495,11 @@ export default function Home() {
               <span>Autorizo a Íntegra a tratar os dados informados para avaliar e responder esta solicitação, conforme princípios da LGPD.</span>
             </label>
 
-            <button className="button button-accent" type="submit">
+            <button className="button button-accent" type="submit" disabled={isSubmitting}>
               <MessageCircle size={18} aria-hidden="true" />
-              Enviar triagem pelo WhatsApp
+              {isSubmitting ? "Registrando triagem..." : "Enviar triagem pelo WhatsApp"}
             </button>
+            {submitStatus && <p className="form-status" role="status">{submitStatus}</p>}
             <p className="form-note">
               Este formulário não envia documentos sensíveis. O compartilhamento de lâminas, notas e extratos deve ocorrer apenas após orientação inicial.
             </p>
