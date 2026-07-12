@@ -492,7 +492,7 @@ export default function Home() {
 
             <label className="check-field">
               <input type="checkbox" checked={form.consent} onChange={(event) => updateField("consent", event.target.checked)} />
-              <span>Autorizo a Íntegra a tratar os dados informados para avaliar e responder esta solicitação, conforme princípios da LGPD.</span>
+              <span>Autorizo a Íntegra a tratar os dados informados para avaliar e responder esta solicitação. Li o <a href="/privacidade" target="_blank">Aviso de Privacidade</a>.</span>
             </label>
 
             <button className="button button-accent" type="submit" disabled={isSubmitting}>
@@ -571,6 +571,7 @@ export default function Home() {
             Diagnóstico independente para produtos financeiros complexos.
           </div>
           <div>
+            <a href="/privacidade" className="footer-privacy">Aviso de Privacidade</a><br/>
             A Íntegra não distribui produtos financeiros, não recebe rebate de instituições e não presta, no modelo inicial, recomendação personalizada de compra de valores mobiliários. Antes da publicação, os textos comerciais devem ser revisados por assessoria jurídica/regulatória.
           </div>
         </div>
@@ -578,5 +579,3 @@ export default function Home() {
     </main>
   );
 }
-
-
