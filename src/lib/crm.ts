@@ -23,11 +23,12 @@ export const caseTypes = [
 
 export const requireStaff = cache(async function requireStaff() {
   const supabase = await createClient();
-  const { data: auth } = await supabase.auth.getUser();
-  if (!auth.user) redirect("/entrar");
-  const { data: profile } = await supabase.from("profiles").select("id, full_name, email, status").eq("id", auth.user.id).single();
-  if (!profile || profile.status !== "active") redirect("/entrar?erro=Acesso%20nÃ£o%20autorizado");
-  return { supabase, user: auth.user, profile };
+  const { data: auth } = await supabase.auth.getClaims();
+  const userId = auth?.claims?.sub;
+  if (!userId) redirect("/entrar");
+  const { data: profile } = await supabase.from("profiles").select("id, full_name, email, status").eq("id", userId).single();
+  if (!profile || profile.status !== "active") redirect("/entrar?erro=Acesso%20nao%20autorizado");
+  return { supabase, user: { id: userId }, profile };
 });
 
 export function formatDate(value?: string | null) {
