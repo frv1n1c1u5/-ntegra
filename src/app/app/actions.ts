@@ -1,4 +1,4 @@
-"use server";
+﻿"use server";
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -19,11 +19,15 @@ export async function updateLeadStage(formData: FormData) {
   const id = String(formData.get("id"));
   const stage = String(formData.get("stage"));
   const lostReason = String(formData.get("lost_reason") || "").trim();
-  if (stage === "perdido" && !lostReason) return;
+  const allowedStages = ["novo", "contato_iniciado", "aguardando_documentos", "qualificado", "proposta_enviada", "convertido", "perdido"];
+  if (!allowedStages.includes(stage)) return { error: "Estagio invalido" };
+  if (stage === "perdido" && !lostReason) return { error: "Informe o motivo da perda" };
   const { supabase } = await requireStaff();
-  await supabase.from("leads").update({ stage, lost_reason: lostReason || null, updated_at: new Date().toISOString() }).eq("id", id);
+  const { error } = await supabase.from("leads").update({ stage, lost_reason: lostReason || null, updated_at: new Date().toISOString() }).eq("id", id);
+  if (error) return { error: "Nao foi possivel mover o lead" };
   await audit("lead", id, "stage_updated", { stage });
   revalidatePath("/app/leads");
+  return { error: null };
 }
 
 export async function assignLead(formData: FormData) {
@@ -105,4 +109,3 @@ export async function savePayment(formData: FormData) {
   await audit("payment", data?.id || caseId, "created", { case_id: caseId, amount });
   revalidatePath(`/app/casos/${caseId}`); revalidatePath("/app");
 }
-
