@@ -10,13 +10,13 @@ export const leadStages = [
 
 export const caseStages = [
   ["triagem", "Triagem"], ["aguardando_pagamento", "Aguardando pagamento"],
-  ["aguardando_documentos", "Aguardando documentos"], ["em_analise", "Em anÃ¡lise"],
-  ["em_revisao", "Em revisÃ£o"], ["pronto_para_entrega", "Pronto para entrega"],
+  ["aguardando_documentos", "Aguardando documentos"], ["em_analise", "Em análise"],
+  ["em_revisao", "Em revisão"], ["pronto_para_entrega", "Pronto para entrega"],
   ["entregue", "Entregue"], ["encerrado", "Encerrado"], ["cancelado", "Cancelado"]
 ] as const;
 
 export const caseTypes = [
-  ["analise_inicial", "AnÃ¡lise inicial"], ["segunda_opiniao", "Segunda opiniÃ£o"],
+  ["analise_inicial", "Análise inicial"], ["segunda_opiniao", "Segunda opinião"],
   ["suporte", "Suporte de caso"], ["fgc", "FGC"],
   ["conflito_interesse", "Conflito de interesse"], ["produto_estruturado", "Produto estruturado / COE"]
 ] as const;
@@ -32,11 +32,11 @@ export const requireStaff = cache(async function requireStaff() {
 });
 
 export function formatDate(value?: string | null) {
-  if (!value) return "â€”";
+  if (!value) return "—";
   return new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(value));
 }
 
 export function formatCurrency(value?: number | string | null) {
-  if (value === null || value === undefined) return "â€”";
+  if (value === null || value === undefined) return "—";
   return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(Number(value));
 }
