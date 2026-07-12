@@ -1,0 +1,1 @@
+﻿export default function CrmLoading(){return <main className="crm-content crm-loading" aria-label="Carregando"><header className="loading-heading"><span/><span/><span/></header><section className="loading-metrics">{Array.from({length:5},(_,index)=><div key={index}/>)}</section><section className="loading-panels"><div/><div/></section></main>}
