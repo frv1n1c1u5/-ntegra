@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import {
   ArrowRight,
@@ -17,6 +17,7 @@ import {
   TriangleAlert
 } from "lucide-react";
 import { FormEvent, useMemo, useState } from "react";
+import { DynamicPrice, DynamicPricingGrid } from "@/components/landing/dynamic-pricing";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5551999381379";
 
@@ -202,7 +203,7 @@ export default function Home() {
             </div>
             <div className="hero-proof" aria-label="Princípios da Íntegra">
               <div className="proof-item">
-                <strong>R$ 129,00</strong>
+                <strong><DynamicPrice /></strong>
                 <span>Análise inicial para entender se há caso e qual caminho seguir.</span>
               </div>
               <div className="proof-item">
@@ -227,7 +228,7 @@ export default function Home() {
             </div>
             <div className="board-metric">
               <span>Primeira leitura</span>
-              <strong>R$ 129,00</strong>
+              <strong><DynamicPrice /></strong>
               <small>triagem técnica do caso</small>
             </div>
             <div className="board-body">
@@ -367,46 +368,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pricing-grid refined-pricing">
-            <article className="pricing-card featured">
-              <span className="pricing-label">Entrada</span>
-              <h3>Análise inicial</h3>
-              <p>Primeira leitura técnica para entender o produto, o problema e se há espaço para diagnóstico ou suporte.</p>
-              <div className="price">R$ 129,00</div>
-              <span className="price-note">Triagem paga, objetiva e sem venda de produto financeiro.</span>
-              <ul>
-                <li>Leitura inicial do caso e dos documentos principais.</li>
-                <li>Indicação do nível de complexidade e próximos passos possíveis.</li>
-                <li>Sem recomendação de compra de novos ativos.</li>
-              </ul>
-            </article>
-
-            <article className="pricing-card">
-              <span className="pricing-label">Segunda opinião</span>
-              <h3>Revisão técnica</h3>
-              <p>Conversa e leitura crítica antes de assinar uma lâmina, aceitar uma proposta ou manter um produto complexo.</p>
-              <div className="price">R$ 300,00 + 0,1%</div>
-              <span className="price-note">0,1% calculado sobre a carteira ou valor analisado no escopo combinado.</span>
-              <ul>
-                <li>Checklist de riscos, custos e perguntas para banco ou corretora.</li>
-                <li>Comparação educacional de cenários e premissas.</li>
-                <li>Registro dos pontos que precisam de confirmação documental.</li>
-              </ul>
-            </article>
-
-            <article className="pricing-card">
-              <span className="pricing-label">Caso assistido</span>
-              <h3>Suporte de caso</h3>
-              <p>Acompanhamento operacional em FGC, negociação, documentação ou recuperação de valor.</p>
-              <div className="price variable-price">Sob análise</div>
-              <span className="price-note">Valor variável conforme urgência, documentação, instituição e objetivo.</span>
-              <ul>
-                <li>Organização de documentos e linha do tempo.</li>
-                <li>Apoio técnico para conversas com instituições.</li>
-                <li>Integração com advogado quando necessário.</li>
-              </ul>
-            </article>
-          </div>
+          <DynamicPricingGrid />
         </div>
       </section>
 
