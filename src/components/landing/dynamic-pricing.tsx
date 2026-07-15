@@ -28,12 +28,24 @@ export function DynamicPrice() {
 
 export function DynamicPricingGrid() {
   const services = usePublicServices();
-  return <div className="pricing-grid refined-pricing">{services.map((service) => <article className={`pricing-card ${service.featured ? "featured" : ""}`} key={service.id || service.slug}>
-    <span className="pricing-label">{service.badge || "Serviço"}</span>
-    <h3>{service.name}</h3>
-    <p>{service.description}</p>
-    <div className={`price ${service.pricing_model === "custom" ? "variable-price" : ""}`}>{formatServicePrice(service)}</div>
-    {service.price_note && <span className="price-note">{service.price_note}</span>}
-    {service.features.length > 0 && <ul>{service.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>}
-  </article>)}</div>;
+  return (
+    <div className="pricing-grid">
+      {services.map((service) => (
+        <article className={`pricing-card ${service.featured ? "featured" : ""}`} key={service.id || service.slug}>
+          <span className="pricing-label">{service.badge || "Serviço"}</span>
+          <h3>{service.name}</h3>
+          <p>{service.description}</p>
+          <div className={`price ${service.pricing_model === "custom" ? "variable-price" : ""}`}>
+            {formatServicePrice(service)}
+          </div>
+          {service.price_note && <span className="price-note">{service.price_note}</span>}
+          {service.features.length > 0 && (
+            <ul>
+              {service.features.map((feature) => <li key={feature}>{feature}</li>)}
+            </ul>
+          )}
+        </article>
+      ))}
+    </div>
+  );
 }
