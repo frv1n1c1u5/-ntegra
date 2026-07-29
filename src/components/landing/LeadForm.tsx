@@ -33,11 +33,11 @@ export default function LeadForm() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".lead-left", { opacity: 0, x: -40 }, {
-        opacity: 1, x: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, x: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".lead-left", start: "top 85%", once: true },
       });
       gsap.fromTo(".lead-form", { opacity: 0, x: 50, scale: 0.97 }, {
-        opacity: 1, x: 0, scale: 1, duration: 0.8, ease: "power3.out",
+        opacity: 1, x: 0, scale: 1, duration: 0.5, ease: "power3.out",
         scrollTrigger: { trigger: ".lead-form", start: "top 80%", once: true },
       });
     }, sectionRef);

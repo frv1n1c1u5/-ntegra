@@ -20,11 +20,11 @@ export default function Services() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".services-head", { opacity: 0, y: 40 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".services-head", start: "top 85%", once: true },
       });
       gsap.fromTo(".service-card", { opacity: 0, y: 50 }, {
-        opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, stagger: 0.06, ease: "power3.out",
         scrollTrigger: { trigger: ".services-grid", start: "top 80%", once: true },
       });
     }, sectionRef);

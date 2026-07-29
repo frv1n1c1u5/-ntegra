@@ -14,11 +14,11 @@ export default function Pricing() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".pricing-head", { opacity: 0, y: 40 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".pricing-head", start: "top 85%", once: true },
       });
       gsap.fromTo(".pricing-card", { opacity: 0, y: 50, scale: 0.97 }, {
-        opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.12, ease: "power3.out",
+        opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.06, ease: "power3.out",
         scrollTrigger: { trigger: ".pricing-grid", start: "top 80%", once: true },
       });
     }, sectionRef);

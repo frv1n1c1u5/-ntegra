@@ -20,11 +20,11 @@ export default function Independence() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".independence-left", { opacity: 0, x: -40 }, {
-        opacity: 1, x: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, x: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".independence-left", start: "top 85%", once: true },
       });
       gsap.fromTo(".principle", { opacity: 0, x: 30 }, {
-        opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power3.out",
+        opacity: 1, x: 0, duration: 0.45, stagger: 0.06, ease: "power3.out",
         scrollTrigger: { trigger: ".principles", start: "top 80%", once: true },
       });
     }, sectionRef);

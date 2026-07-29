@@ -21,11 +21,11 @@ export default function FAQ() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".faq-head", { opacity: 0, y: 40 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".faq-head", start: "top 85%", once: true },
       });
       gsap.fromTo(".faq-item", { opacity: 0, y: 30 }, {
-        opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, stagger: 0.05, ease: "power3.out",
         scrollTrigger: { trigger: ".faq-grid", start: "top 80%", once: true },
       });
     }, sectionRef);
