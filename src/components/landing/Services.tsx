@@ -46,7 +46,7 @@ export default function Services() {
           </p>
         </div>
         <div className="cards-3 services-grid">
-          {services.map((service, i) => {
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <article key={service.title} className="service-card">
