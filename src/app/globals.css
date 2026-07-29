@@ -44,6 +44,21 @@
 .honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
 .form-status{margin:0;color:var(--accent-dark);font-size:13px;font-weight:750}
 .footer-privacy{display:inline-block;margin-bottom:8px;color:var(--accent-dark);font-weight:760}
+.diagnostic-board{scroll-margin-top:110px}
+.diagnostic-board:target{border-color:rgba(7,155,130,.58);box-shadow:0 34px 90px rgba(4,16,12,.19),0 0 0 4px rgba(7,155,130,.12)}
+
+@media (min-width:1025px){
+  .hero-grid{grid-template-columns:minmax(590px,620px) minmax(420px,480px);gap:clamp(48px,5vw,72px)}
+  .hero h1{max-width:620px;font-size:clamp(60px,5vw,72px);line-height:.95}
+  .hero-copy{max-width:570px;margin-top:22px}
+  .hero-actions{margin-top:26px}
+  .hero-proof{max-width:590px;gap:14px;margin-top:30px}
+  .section{padding:88px 0}
+  .section-head{margin-bottom:40px}
+  .service-card,.content-card{min-height:270px}
+  .step{min-height:250px}
+  .pricing-card{min-height:450px}
+}
 
 @media (max-width:1024px){
   .shell{width:min(100% - 40px,880px)}

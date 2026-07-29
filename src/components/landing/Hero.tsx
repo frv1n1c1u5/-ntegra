@@ -3,7 +3,7 @@
 import { useRef, useEffect, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { LockKeyhole, MessageCircle, ClipboardCheck, BadgeCheck, ReceiptText, TriangleAlert, Handshake } from "lucide-react";
+import { LockKeyhole, MessageCircle, FileSearch, BadgeCheck, ReceiptText, TriangleAlert, Handshake } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,14 +26,14 @@ export default function Hero() {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.2 });
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.05 });
 
-      tl.fromTo(".hero-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 })
-        .fromTo(".hero-title-word", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.08 }, "-=0.3")
-        .fromTo(".hero-copy", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.4")
-        .fromTo(".hero-actions", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
-        .fromTo(".hero-proof-item", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2")
-        .fromTo(".diagnostic-board", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2 }, "-=1");
+      tl.fromTo(".hero-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35 })
+        .fromTo(".hero-title-word", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.035 }, "-=0.2")
+        .fromTo(".hero-copy", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, "-=0.3")
+        .fromTo(".hero-actions", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35 }, "-=0.28")
+        .fromTo(".hero-proof-item", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.05 }, "-=0.2")
+        .fromTo(".diagnostic-board", { opacity: 0, x: 36 }, { opacity: 1, x: 0, duration: 0.55 }, "-=0.75");
 
       gsap.to(".hero-monogram", {
         y: -120,
@@ -43,7 +43,7 @@ export default function Hero() {
 
       gsap.to(".diagnostic-board", {
         y: -8,
-        duration: 3,
+        duration: 4,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
@@ -78,11 +78,11 @@ export default function Hero() {
             <div className="hero-actions">
               <a className="button button-accent" href={quickMessage} target="_blank" rel="noreferrer">
                 <MessageCircle size={18} aria-hidden="true" />
-                Analisar meu caso
+                Analisar meu caso no WhatsApp
               </a>
-              <a className="button button-secondary" href="#triagem">
-                <ClipboardCheck size={18} aria-hidden="true" />
-                Preencher triagem
+              <a className="button button-secondary" href="#exemplo-diagnostico">
+                <FileSearch size={18} aria-hidden="true" />
+                Ver exemplo de diagnóstico
               </a>
             </div>
             <div className="hero-proof">
@@ -99,7 +99,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <aside className="diagnostic-board" aria-label="Exemplo de mapa de diagnóstico">
+          <aside id="exemplo-diagnostico" className="diagnostic-board" aria-label="Exemplo de mapa de diagnóstico">
             <div className="board-top">
               <span className="board-title">Dossiê Íntegra</span>
               <span className="board-status">

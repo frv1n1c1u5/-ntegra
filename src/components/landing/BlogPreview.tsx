@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "lucide-react";
@@ -19,11 +20,11 @@ export default function BlogPreview() {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".blog-head", { opacity: 0, y: 40 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".blog-head", start: "top 85%", once: true },
       });
       gsap.fromTo(".content-card", { opacity: 0, y: 50 }, {
-        opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: "power3.out",
+        opacity: 1, y: 0, duration: 0.45, stagger: 0.06, ease: "power3.out",
         scrollTrigger: { trigger: ".content-grid", start: "top 80%", once: true },
       });
     }, sectionRef);
@@ -47,10 +48,10 @@ export default function BlogPreview() {
             <article key={content.title} className="content-card">
               <h3>{content.title}</h3>
               <p>{content.copy}</p>
-              <a href="#triagem">
-                Quero analisar meu caso
+              <Link href="/blog#artigos">
+                Ler no Escudo do Investidor
                 <ArrowRight size={17} aria-hidden="true" />
-              </a>
+              </Link>
             </article>
           ))}
         </div>
