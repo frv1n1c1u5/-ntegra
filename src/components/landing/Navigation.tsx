@@ -31,82 +31,80 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav
-      className={`nav ${scrolled ? "nav-scrolled" : ""}`}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        borderBottom: scrolled ? "1px solid rgba(216,225,221,0.82)" : "1px solid transparent",
-        background: scrolled ? "rgba(255,255,255,0.92)" : "transparent",
-        backdropFilter: scrolled ? "blur(20px) saturate(150%)" : "none",
-        transition: "all 0.3s ease",
-      }}
-      aria-label="Navegação principal"
-    >
-      <div className="shell">
-        <div className="nav-inner">
-          <a className="brand" href="#top" aria-label="Íntegra Consultoria">
-            <span className="brand-mark" aria-hidden="true">Í</span>
-            <span className="brand-name">
-              <strong>Íntegra</strong>
-              <small>Consultoria</small>
-            </span>
-          </a>
+    <>
+      <nav
+        className={`nav ${scrolled ? "nav-scrolled" : ""} ${mobileOpen ? "nav-open" : ""}`}
+        aria-label="Navegação principal"
+      >
+        <div className="shell">
+          <div className="nav-inner">
+            <a className="brand" href="#top" aria-label="Íntegra Consultoria">
+              <span className="brand-mark" aria-hidden="true">Í</span>
+              <span className="brand-name">
+                <strong>Íntegra</strong>
+                <small>Consultoria</small>
+              </span>
+            </a>
 
-          <div className="nav-links hidden md:flex">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
+            <div className="nav-links desktop-nav-links">
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            <a
+              className="button button-primary desktop-nav-cta"
+              href={quickMessage}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MessageCircle size={18} aria-hidden="true" />
+              Falar agora
+            </a>
+
+            <button
+              className="mobile-menu-button"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
 
-          <a
-            className="button button-primary hidden md:inline-flex"
-            href={quickMessage}
-            target="_blank"
-            rel="noreferrer"
-            style={{ fontSize: 14 }}
-          >
-            <MessageCircle size={18} aria-hidden="true" />
-            Falar agora
-          </a>
-
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-            style={{ color: "var(--ink)" }}
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {mobileOpen && (
-          <div className="md:hidden pb-6 border-t pt-4" style={{ borderColor: "var(--line)" }}>
-            <div className="flex flex-col gap-4">
+          {mobileOpen && (
+            <div id="mobile-menu" className="mobile-menu-panel">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="py-2"
-                  style={{ color: "var(--muted)", fontSize: 15 }}
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <a className="button button-primary mt-2" href={quickMessage} target="_blank" rel="noreferrer">
+              <a className="button button-primary" href={quickMessage} target="_blank" rel="noreferrer">
                 <MessageCircle size={18} aria-hidden="true" />
                 Falar agora
               </a>
             </div>
-          </div>
-        )}
+          )}
+        </div>
+      </nav>
+
+      <div className="mobile-conversion-bar" aria-label="Contato rápido">
+        <div>
+          <strong>Análise inicial</strong>
+          <span>R$ 129</span>
+        </div>
+        <a href={quickMessage} target="_blank" rel="noreferrer">
+          <MessageCircle size={19} aria-hidden="true" />
+          Falar no WhatsApp
+        </a>
       </div>
-    </nav>
+    </>
   );
 }

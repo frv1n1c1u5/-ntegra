@@ -61,24 +61,24 @@ export default function Hero() {
       <div className="shell">
         <div className="hero-grid">
           <div>
-            <div className="eyebrow hero-eyebrow" style={{ opacity: 0 }}>
+            <div className="eyebrow hero-eyebrow">
               <LockKeyhole size={16} aria-hidden="true" />
-              Independente, técnico e sem comissão de produto
+              Análise independente · sem comissão
             </div>
             <h1>
               {titleWords.map((word, i) => (
-                <span key={i} className="hero-title-word" style={{ display: "inline-block", marginRight: "0.3em", opacity: 0 }}>
+                <span key={i} className="hero-title-word" style={{ display: "inline-block", marginRight: "0.3em" }}>
                   {word}
                 </span>
               ))}
             </h1>
-            <p className="hero-copy hero-copy-anim" style={{ opacity: 0 }}>
+            <p className="hero-copy hero-copy-anim">
               A Íntegra traduz COEs, operações estruturadas, FGC e possíveis conflitos de interesse em um diagnóstico objetivo, visual e acionável. Sem rebate. Sem venda de produto.
             </p>
-            <div className="hero-actions" style={{ opacity: 0 }}>
+            <div className="hero-actions">
               <a className="button button-accent" href={quickMessage} target="_blank" rel="noreferrer">
                 <MessageCircle size={18} aria-hidden="true" />
-                Começar pelo WhatsApp
+                Analisar meu caso
               </a>
               <a className="button button-secondary" href="#triagem">
                 <ClipboardCheck size={18} aria-hidden="true" />
@@ -91,7 +91,7 @@ export default function Hero() {
                 { strong: "Sem call", span: "Não recomendamos compra de novos ativos no modelo inicial." },
                 { strong: "Com método", span: "Premissas, cenários, documentos e perguntas de negociação." },
               ].map((item, i) => (
-                <div key={i} className="proof-item hero-proof-item" style={{ opacity: 0 }}>
+                <div key={i} className="proof-item hero-proof-item">
                   <strong>{item.strong}</strong>
                   <span>{item.span}</span>
                 </div>
@@ -99,7 +99,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <aside className="diagnostic-board" aria-label="Exemplo de mapa de diagnóstico" style={{ opacity: 0 }}>
+          <aside className="diagnostic-board" aria-label="Exemplo de mapa de diagnóstico">
             <div className="board-top">
               <span className="board-title">Dossiê Íntegra</span>
               <span className="board-status">
