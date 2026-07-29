@@ -1,85 +1,25 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
-  BookOpen,
   Clock3,
   FileWarning,
   MessageCircle,
-  Search,
   ShieldCheck,
   TrendingUp
 } from "lucide-react";
+import { articles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Escudo do Investidor | Íntegra Consultoria",
   description:
-    "Blog da Íntegra Consultoria com artigos sobre COE, FGC, conflito de interesse, rebate e produtos financeiros complexos."
+    "Artigos da Íntegra Consultoria sobre COE, FGC, conflito de interesse, rebate e produtos financeiros complexos."
 };
 
-const featuredArticle = {
-  category: "COE",
-  title: "O que a corretora não te conta antes de vender um COE",
-  excerpt:
-    "Barreiras, indexadores, liquidez e custo de oportunidade costumam ficar escondidos atrás de uma promessa simples. Veja onde olhar antes de assinar.",
-  readTime: "7 min",
-  date: "Guia prático"
-};
-
-const articles = [
-  {
-    icon: FileWarning,
-    category: "Produtos estruturados",
-    title: "Como identificar risco escondido em uma operação estruturada",
-    excerpt:
-      "Um checklist objetivo para separar risco real, cenário otimista e linguagem comercial na lâmina do produto.",
-    readTime: "6 min"
-  },
-  {
-    icon: ShieldCheck,
-    category: "FGC",
-    title: "FGC: o que preparar antes da ansiedade bater",
-    excerpt:
-      "Documentos, limites por CPF/CNPJ e conglomerado, aplicativo e pontos que costumam gerar retrabalho.",
-    readTime: "5 min"
-  },
-  {
-    icon: TrendingUp,
-    category: "Conflito de interesse",
-    title: "Rebate não é detalhe: é incentivo econômico",
-    excerpt:
-      "Por que a comissão embutida pode mudar a qualidade da recomendação que chega ao investidor.",
-    readTime: "4 min"
-  },
-  {
-    icon: Search,
-    category: "Segunda opinião",
-    title: "Cinco perguntas antes de aceitar uma proposta do banco",
-    excerpt:
-      "Perguntas simples que obrigam a instituição a explicar liquidez, custo, prazo, risco e alternativa de forma mais clara.",
-    readTime: "5 min"
-  },
-  {
-    icon: BookOpen,
-    category: "Educação financeira",
-    title: "Quando o produto parece sofisticado, mas só é opaco",
-    excerpt:
-      "Sofisticação real melhora a relação risco-retorno. Opacidade só dificulta a comparação e protege quem vende.",
-    readTime: "3 min"
-  },
-  {
-    icon: FileWarning,
-    category: "Mercado secundário",
-    title: "Sair antes do vencimento: ágio, deságio e custo emocional",
-    excerpt:
-      "Como pensar em venda secundária sem confundir preço de saída com prejuízo inevitável ou solução automática.",
-    readTime: "6 min"
-  }
-];
-
-const categories = ["COE", "FGC", "Conflito de interesse", "Rebate", "Mercado secundário", "Checklist"];
-
+const icons = [FileWarning, TrendingUp, ShieldCheck];
+const featuredArticle = articles[0];
 const whatsappHref =
   "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Li%20o%20Escudo%20do%20Investidor%20e%20quero%20avaliar%20meu%20caso.";
 
@@ -121,26 +61,35 @@ export default function BlogPage() {
             <p className="section-kicker">Blog</p>
             <h1>Escudo do Investidor</h1>
             <p className="blog-hero-copy">
-              Conteúdo direto para quem quer entender o que está comprando, questionar incentivos comerciais e
-              tomar decisões com mais clareza antes que o problema fique caro.
+              Conteúdo direto para entender o que você está comprando, questionar incentivos comerciais e
+              decidir com mais clareza antes que o problema fique caro.
             </p>
           </div>
 
           <article className="blog-featured-card">
+            <div className="blog-featured-image">
+              <Image
+                src={featuredArticle.image}
+                alt={featuredArticle.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 767px) calc(100vw - 32px), 460px"
+              />
+            </div>
             <span className="article-category">{featuredArticle.category}</span>
             <h2>{featuredArticle.title}</h2>
-            <p>{featuredArticle.excerpt}</p>
+            <p>{featuredArticle.description}</p>
             <div className="article-meta">
-              <span>{featuredArticle.date}</span>
+              <span>Guia prático</span>
               <span>
                 <Clock3 size={15} aria-hidden="true" />
                 {featuredArticle.readTime}
               </span>
             </div>
-            <a href="#artigos">
+            <Link href={`/blog/${featuredArticle.slug}`}>
               Ler destaque
               <ArrowRight size={18} aria-hidden="true" />
-            </a>
+            </Link>
           </article>
         </div>
       </section>
@@ -149,11 +98,11 @@ export default function BlogPage() {
         <div className="shell blog-filter-grid">
           <div>
             <p className="section-kicker">Temas</p>
-            <h2 className="section-title">Armadilhas explicadas em linguagem de investidor.</h2>
+            <h2 className="section-title">Decisões financeiras explicadas sem linguagem de venda.</h2>
           </div>
           <div className="category-cloud" aria-label="Categorias do blog">
-            {categories.map((category) => (
-              <a href="#artigos" key={category}>{category}</a>
+            {articles.map((article) => (
+              <a href={`#${article.slug}`} key={article.category}>{article.category}</a>
             ))}
           </div>
         </div>
@@ -163,36 +112,41 @@ export default function BlogPage() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <p className="section-kicker">Artigos mockup</p>
-              <h2 className="section-title">Últimas defesas publicadas.</h2>
+              <p className="section-kicker">Leitura essencial</p>
+              <h2 className="section-title">Três guias para começar mais protegido.</h2>
             </div>
             <p className="section-copy">
-              Estes cards são conteúdo de exemplo para validar o visual. Depois podem virar posts reais com SEO e páginas individuais.
+              Conteúdo educacional fundamentado em fontes oficiais, com checklists que você pode usar antes de investir ou ao revisar uma decisão.
             </p>
           </div>
 
           <div className="blog-grid">
-            {articles.map((article) => {
-              const Icon = article.icon;
+            {articles.map((article, index) => {
+              const Icon = icons[index];
               return (
-                <article className="blog-card" key={article.title}>
-                  <div className="blog-card-top">
-                    <span className="card-icon">
-                      <Icon size={21} aria-hidden="true" />
-                    </span>
-                    <span className="article-category">{article.category}</span>
-                  </div>
-                  <h3>{article.title}</h3>
-                  <p>{article.excerpt}</p>
-                  <div className="article-meta">
-                    <span>
-                      <Clock3 size={15} aria-hidden="true" />
-                      {article.readTime}
-                    </span>
-                    <a href="#artigos" aria-label={`Ler ${article.title}`}>
-                      Ler
-                      <ArrowRight size={16} aria-hidden="true" />
-                    </a>
+                <article className="blog-card" id={article.slug} key={article.slug}>
+                  <Link className="blog-card-image" href={`/blog/${article.slug}`} aria-label={`Ler ${article.title}`}>
+                    <Image src={article.image} alt="" fill sizes="(max-width: 767px) calc(100vw - 32px), 380px" />
+                  </Link>
+                  <div className="blog-card-body">
+                    <div className="blog-card-top">
+                      <span className="card-icon">
+                        <Icon size={21} aria-hidden="true" />
+                      </span>
+                      <span className="article-category">{article.category}</span>
+                    </div>
+                    <h3><Link href={`/blog/${article.slug}`}>{article.title}</Link></h3>
+                    <p>{article.description}</p>
+                    <div className="article-meta">
+                      <span>
+                        <Clock3 size={15} aria-hidden="true" />
+                        {article.readTime}
+                      </span>
+                      <Link href={`/blog/${article.slug}`} aria-label={`Ler ${article.title}`}>
+                        Ler artigo
+                        <ArrowRight size={16} aria-hidden="true" />
+                      </Link>
+                    </div>
                   </div>
                 </article>
               );
@@ -231,7 +185,3 @@ export default function BlogPage() {
     </main>
   );
 }
-
-
-
-

@@ -9,9 +9,9 @@ import { ArrowRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = [
-  { title: "COE sem mistério", copy: "O que olhar antes de aceitar uma estrutura: barreiras, indexadores, liquidez, cenários e custo de oportunidade." },
-  { title: "FGC na prática", copy: "Quais documentos separar, como interpretar limites e por que o prazo emocional costuma ser diferente do prazo operacional." },
-  { title: "Rebate e incentivo", copy: "Como comissões e metas comerciais podem distorcer a recomendação apresentada ao investidor." },
+  { title: "COE: 9 perguntas antes de assinar", copy: "Proteção, barreiras, liquidez, cenários e remuneração: o checklist que transforma a promessa em critérios.", href: "/blog/coe-perguntas-antes-de-assinar" },
+  { title: "FGC sem confusão", copy: "Como funcionam o limite por conglomerado, o teto de quatro anos e a cobertura dos principais produtos.", href: "/blog/fgc-limites-conglomerado-quatro-anos" },
+  { title: "Rebate e comissão", copy: "Onde encontrar quanto o intermediário recebeu e como avaliar o incentivo por trás de uma recomendação.", href: "/blog/rebate-comissao-intermediario" },
 ];
 
 export default function BlogPreview() {
@@ -48,7 +48,7 @@ export default function BlogPreview() {
             <article key={content.title} className="content-card">
               <h3>{content.title}</h3>
               <p>{content.copy}</p>
-              <Link href="/blog#artigos">
+              <Link href={content.href}>
                 Ler no Escudo do Investidor
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
