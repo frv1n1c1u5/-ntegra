@@ -37,9 +37,9 @@ export default function BlogPage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/#dores">Dores</Link>
-            <Link href="/#metodo">Método</Link>
-            <Link href="/#precos">Preços</Link>
+            <Link href="/solucoes">Soluções</Link>
+            <Link href="/como-funciona">Método</Link>
+            <Link href="/precos">Preços</Link>
             <Link href="/blog">Blog</Link>
           </div>
 
@@ -161,10 +161,10 @@ export default function BlogPage() {
             <p className="section-kicker">Do artigo para o caso real</p>
             <h2>Leu algo parecido com o que aconteceu com você?</h2>
             <p>
-              A análise inicial custa R$ 129,00 e serve para entender se há risco, conflito ou documentação que precisa ser revisada.
+              A análise inicial custa R$ 229,00 e serve para entender se há risco, conflito ou documentação que precisa ser revisada.
             </p>
           </div>
-          <Link className="button button-accent" href="/#triagem">
+          <Link className="button button-accent" href="/precos#triagem">
             Preencher triagem
             <ArrowRight size={18} aria-hidden="true" />
           </Link>

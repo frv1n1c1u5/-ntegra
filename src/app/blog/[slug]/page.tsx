@@ -152,7 +152,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <span className="article-rail-label">Precisa revisar um caso real?</span>
             <h2>Transforme os documentos em uma decisão clara.</h2>
             <p>A triagem inicial ajuda a identificar risco, conflito e os próximos passos possíveis.</p>
-            <Link className="button button-accent" href="/#triagem">
+            <Link className="button button-accent" href="/precos#triagem">
               Solicitar análise<ArrowRight size={17} aria-hidden="true" />
             </Link>
           </div>

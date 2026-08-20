@@ -21,7 +21,7 @@ export const fallbackPublicServices: PublicService[] = [
     badge: "Entrada",
     description: "Primeira leitura técnica para entender o produto, o problema e se há espaço para diagnóstico ou suporte.",
     pricing_model: "fixed",
-    base_price: 129,
+    base_price: 229,
     percentage_rate: null,
     price_label_override: null,
     price_note: "Triagem paga, objetiva e sem venda de produto financeiro.",
