@@ -6,10 +6,10 @@ import { MessageCircle, Menu, X } from "lucide-react";
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5551999381379";
 
 const navLinks = [
-  { label: "Dores", href: "#dores" },
-  { label: "Método", href: "#metodo" },
-  { label: "Preços", href: "#precos" },
-  { label: "Blog", href: "#blog-preview" },
+  { label: "Soluções", href: "/solucoes" },
+  { label: "Método", href: "/como-funciona" },
+  { label: "Preços", href: "/precos" },
+  { label: "Blog", href: "/blog" },
 ];
 
 function buildWhatsAppUrl(message: string) {
@@ -98,7 +98,7 @@ export default function Navigation() {
       <div className="mobile-conversion-bar" aria-label="Contato rápido">
         <div>
           <strong>Análise inicial</strong>
-          <span>R$ 129</span>
+          <span>R$ 229</span>
         </div>
         <a href={quickMessage} target="_blank" rel="noreferrer">
           <MessageCircle size={19} aria-hidden="true" />

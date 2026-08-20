@@ -1,15 +1,7 @@
 "use client";
 
-import Navigation from "./Navigation";
 import Hero from "./Hero";
-import Services from "./Services";
-import Method from "./Method";
-import Independence from "./Independence";
-import Pricing from "./Pricing";
-import LeadForm from "./LeadForm";
-import BlogPreview from "./BlogPreview";
-import FAQ from "./FAQ";
-import Footer from "./Footer";
+import SiteFrame from "./SiteFrame";
 
 function GrainOverlay() {
   return (
@@ -22,18 +14,9 @@ function GrainOverlay() {
 
 export default function LandingPage() {
   return (
-    <main className="page">
+    <SiteFrame>
       <GrainOverlay />
-      <Navigation />
       <Hero />
-      <Services />
-      <Method />
-      <Independence />
-      <Pricing />
-      <LeadForm />
-      <BlogPreview />
-      <FAQ />
-      <Footer />
-    </main>
+    </SiteFrame>
   );
 }
