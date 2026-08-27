@@ -18,7 +18,7 @@ export default function FAQ() {
   const sectionRef = useRef<HTMLElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   useEffect(() => {
-    if (!sectionRef.current) return;
+    if (!sectionRef.current || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".faq-head", { opacity: 0, y: 40 }, {
         opacity: 1, y: 0, duration: 0.45, ease: "power3.out",

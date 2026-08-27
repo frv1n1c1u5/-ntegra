@@ -17,7 +17,7 @@ export default function Independence() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
+    if (!sectionRef.current || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(".independence-left", { opacity: 0, x: -40 }, {
         opacity: 1, x: 0, duration: 0.45, ease: "power3.out",

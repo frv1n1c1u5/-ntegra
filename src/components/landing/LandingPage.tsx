@@ -1,6 +1,8 @@
-"use client";
-
 import Hero from "./Hero";
+import AudienceFit from "./AudienceFit";
+import ExpressDossier from "./ExpressDossier";
+import FinalCTA from "./FinalCTA";
+import MethodTransparency from "./MethodTransparency";
 import SiteFrame from "./SiteFrame";
 
 function GrainOverlay() {
@@ -17,6 +19,10 @@ export default function LandingPage() {
     <SiteFrame>
       <GrainOverlay />
       <Hero />
+      <AudienceFit />
+      <ExpressDossier />
+      <MethodTransparency />
+      <FinalCTA />
     </SiteFrame>
   );
 }

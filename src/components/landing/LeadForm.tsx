@@ -1,11 +1,9 @@
 "use client";
 
-import { useRef, useEffect, useState, FormEvent } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useState, FormEvent } from "react";
 import { MessageCircle, Landmark, BriefcaseBusiness, ShieldCheck } from "lucide-react";
+import { trackConversion } from "@/lib/analytics";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5551999381379";
 
@@ -25,24 +23,10 @@ function buildWhatsAppUrl(message: string) {
 
 export default function LeadForm() {
   const sectionRef = useRef<HTMLElement>(null);
+  const hasTrackedStart = useRef(false);
   const [form, setForm] = useState<FormData>(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
-
-  useEffect(() => {
-    if (!sectionRef.current) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".lead-left", { opacity: 0, x: -40 }, {
-        opacity: 1, x: 0, duration: 0.45, ease: "power3.out",
-        scrollTrigger: { trigger: ".lead-left", start: "top 85%", once: true },
-      });
-      gsap.fromTo(".lead-form", { opacity: 0, x: 50, scale: 0.97 }, {
-        opacity: 1, x: 0, scale: 1, duration: 0.5, ease: "power3.out",
-        scrollTrigger: { trigger: ".lead-form", start: "top 80%", once: true },
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
 
   function updateField<K extends keyof FormData>(key: K, value: FormData[K]) {
     setForm((current) => ({ ...current, [key]: value }));
@@ -62,6 +46,7 @@ export default function LeadForm() {
       const result = await response.json().catch(() => ({}));
       setIsSubmitting(false);
       if (!response.ok) { setSubmitStatus(result.error || "Erro ao registrar."); return; }
+      trackConversion("triage_completed", { placement: "triage" });
       const message = [
         "Olá, Íntegra. Quero iniciar uma triagem.", `Nome: ${form.name}`, `WhatsApp: ${form.phone}`,
         `E-mail: ${form.email}`, `Instituição: ${form.institution}`, `Tipo: ${form.issueType}`,
@@ -90,7 +75,7 @@ export default function LeadForm() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="lead-form">
+          <form onSubmit={handleSubmit} className="lead-form" onFocusCapture={() => { if (!hasTrackedStart.current) { hasTrackedStart.current = true; trackConversion("triage_started", { placement: "triage" }); } }}>
             <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <div className="field-grid">
               {[{ id: "name", label: "Nome", ph: "Seu nome" }, { id: "phone", label: "WhatsApp", ph: "(11) 99999-9999" }, { id: "email", label: "E-mail", ph: "voce@email.com", type: "email" }, { id: "institution", label: "Instituição envolvida", ph: "Banco, corretora ou emissor" }].map((f) => (
@@ -100,8 +85,8 @@ export default function LeadForm() {
                 </div>
               ))}
               <div className="field">
-                <label>Tipo de caso</label>
-                <select required value={form.issueType} onChange={(e) => updateField("issueType", e.target.value)}>
+                <label htmlFor="issue-type">Tipo de caso</label>
+                <select id="issue-type" required value={form.issueType} onChange={(e) => updateField("issueType", e.target.value)}>
                   <option value="">Selecione</option>
                   <option>COE ou produto estruturado</option>
                   <option>FGC ou instituição em problema</option>
@@ -111,8 +96,8 @@ export default function LeadForm() {
                 </select>
               </div>
               <div className="field">
-                <label>Valor aproximado</label>
-                <select required value={form.amount} onChange={(e) => updateField("amount", e.target.value)}>
+                <label htmlFor="amount">Valor aproximado</label>
+                <select id="amount" required value={form.amount} onChange={(e) => updateField("amount", e.target.value)}>
                   <option value="">Selecione</option>
                   <option>Até R$ 100 mil</option>
                   <option>R$ 100 mil a R$ 500 mil</option>
@@ -121,8 +106,8 @@ export default function LeadForm() {
                 </select>
               </div>
               <div className="field full">
-                <label>Urgência</label>
-                <select required value={form.urgency} onChange={(e) => updateField("urgency", e.target.value)}>
+                <label htmlFor="urgency">Urgência</label>
+                <select id="urgency" required value={form.urgency} onChange={(e) => updateField("urgency", e.target.value)}>
                   <option value="">Selecione</option>
                   <option>Tenho prazo de assinatura ou resposta em até 48h</option>
                   <option>Preciso decidir nesta semana</option>
@@ -131,8 +116,8 @@ export default function LeadForm() {
                 </select>
               </div>
               <div className="field full">
-                <label>Resumo do problema</label>
-                <textarea value={form.notes} onChange={(e) => updateField("notes", e.target.value)} placeholder="Ex.: comprei um COE em 2023, não entendi a liquidez e quero saber se há custo de oportunidade ou conflito." />
+                <label htmlFor="notes">Resumo do problema</label>
+                <textarea id="notes" value={form.notes} onChange={(e) => updateField("notes", e.target.value)} placeholder="Ex.: comprei um COE em 2023, não entendi a liquidez e quero saber se há custo de oportunidade ou conflito." />
               </div>
             </div>
             <label className="check-field">

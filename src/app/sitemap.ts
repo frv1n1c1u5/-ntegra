@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1
     },
+    ...["/solucoes", "/como-funciona", "/precos", "/privacidade"].map((path) => ({ url: `${baseUrl}${path}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 })),
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),

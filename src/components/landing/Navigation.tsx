@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { MessageCircle, Menu, X } from "lucide-react";
-
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5551999381379";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, MessageCircle, X } from "lucide-react";
+import { useState } from "react";
+import { trackConversion } from "@/lib/analytics";
+import { qualifiedWhatsAppUrl } from "@/lib/contact";
 
 const navLinks = [
   { label: "Soluções", href: "/solucoes" },
@@ -12,99 +14,28 @@ const navLinks = [
   { label: "Blog", href: "/blog" },
 ];
 
-function buildWhatsAppUrl(message: string) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
-
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href || (href === "/blog" && pathname.startsWith("/blog/"));
 
-  const quickMessage = buildWhatsAppUrl(
-    "Olá, Íntegra. Quero entender se um produto financeiro que me ofereceram ou que já comprei tem riscos, custos ou conflitos que eu não estou enxergando."
-  );
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <>
-      <nav
-        className={`nav ${scrolled ? "nav-scrolled" : ""} ${mobileOpen ? "nav-open" : ""}`}
-        aria-label="Navegação principal"
-      >
-        <div className="shell">
-          <div className="nav-inner">
-            <a className="brand" href="#top" aria-label="Íntegra Consultoria">
-              <span className="brand-mark" aria-hidden="true">Í</span>
-              <span className="brand-name">
-                <strong>Íntegra</strong>
-                <small>Consultoria</small>
-              </span>
-            </a>
-
-            <div className="nav-links desktop-nav-links">
-              {navLinks.map((link) => (
-                <a key={link.href} href={link.href}>
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            <a
-              className="button button-primary desktop-nav-cta"
-              href={quickMessage}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MessageCircle size={18} aria-hidden="true" />
-              Falar agora
-            </a>
-
-            <button
-              className="mobile-menu-button"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-              aria-expanded={mobileOpen}
-              aria-controls="mobile-menu"
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-
-          {mobileOpen && (
-            <div id="mobile-menu" className="mobile-menu-panel">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a className="button button-primary" href={quickMessage} target="_blank" rel="noreferrer">
-                <MessageCircle size={18} aria-hidden="true" />
-                Falar agora
-              </a>
-            </div>
-          )}
+  return <>
+    <nav className={`nav editorial-nav ${mobileOpen ? "nav-open" : ""}`} aria-label="Navegação principal">
+      <div className="shell nav-inner">
+        <Link className="brand" href="/" onClick={() => setMobileOpen(false)} aria-label="Íntegra, página inicial">
+          <span className="brand-mark" aria-hidden="true">Í</span><span className="brand-name"><strong>Íntegra</strong><small>Leitura independente</small></span>
+        </Link>
+        <div className="nav-links desktop-nav-links">
+          {navLinks.map((link) => <Link key={link.href} href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</Link>)}
         </div>
-      </nav>
-
-      <div className="mobile-conversion-bar" aria-label="Contato rápido">
-        <div>
-          <strong>Análise inicial</strong>
-          <span>R$ 229</span>
-        </div>
-        <a href={quickMessage} target="_blank" rel="noreferrer">
-          <MessageCircle size={19} aria-hidden="true" />
-          Falar no WhatsApp
-        </a>
+        <a className="button button-primary desktop-nav-cta" href={qualifiedWhatsAppUrl} target="_blank" rel="noreferrer" onClick={() => trackConversion("whatsapp_cta", { placement: "navigation" })}><MessageCircle size={17} aria-hidden="true" />Falar agora</a>
+        <button className="mobile-menu-button" onClick={() => setMobileOpen((open) => !open)} aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={mobileOpen} aria-controls="mobile-menu">{mobileOpen ? <X size={22} /> : <Menu size={22} />}</button>
       </div>
-    </>
-  );
+      {mobileOpen && <div id="mobile-menu" className="mobile-menu-panel"><div className="shell">
+        {navLinks.map((link) => <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</Link>)}
+        <a className="button button-primary" href={qualifiedWhatsAppUrl} target="_blank" rel="noreferrer" onClick={() => trackConversion("whatsapp_cta", { placement: "mobile_navigation" })}><MessageCircle size={18} aria-hidden="true" />Falar agora</a>
+      </div></div>}
+    </nav>
+    <div className="mobile-conversion-bar" aria-label="Contato rápido"><div><strong>Dossiê Expresso</strong><span>R$ 229 · até 48h</span></div><a href={qualifiedWhatsAppUrl} target="_blank" rel="noreferrer" onClick={() => trackConversion("whatsapp_cta", { placement: "mobile_bar" })}><MessageCircle size={19} aria-hidden="true" />WhatsApp</a></div>
+  </>;
 }

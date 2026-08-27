@@ -4,13 +4,13 @@ export default function Footer() {
       <div className="shell">
         <div className="footer-grid">
           <div>
-            <strong>Íntegra Consultoria</strong>
-            Diagnóstico independente para produtos financeiros complexos.
+            <strong>Íntegra Ltda.</strong>
+            Leitura independente para decisões financeiras complexas.
           </div>
           <div>
             <a href="/privacidade" className="footer-privacy">Aviso de Privacidade</a>
             <br />
-            A Íntegra não distribui produtos financeiros, não recebe rebate de instituições e não presta, no modelo inicial, recomendação personalizada de compra de valores mobiliários. Antes da publicação, os textos comerciais devem ser revisados por assessoria jurídica/regulatória.
+            CNPJ 68.656.876/0001-24<br />A Íntegra não distribui produtos financeiros, não recebe rebate de instituições e não presta recomendação personalizada de compra ou venda de valores mobiliários.
           </div>
         </div>
       </div>
