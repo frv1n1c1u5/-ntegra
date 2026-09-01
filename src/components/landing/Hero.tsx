@@ -1,32 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
-import { useEffect, useRef } from "react";
 import { trackConversion } from "@/lib/analytics";
 import { qualifiedWhatsAppUrl } from "@/lib/contact";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => {
-      const v = videoRef.current;
-      if (!v) return;
-      if (media.matches) {
-        v.pause();
-        v.removeAttribute("autoplay");
-      } else {
-        v.setAttribute("autoplay", "");
-        v.play().catch(() => { /* poster permanece como fallback */ });
-      }
-    };
-    apply();
-    media.addEventListener("change", apply);
-    return () => media.removeEventListener("change", apply);
-  }, []);
-
   return (
     <section id="top" className="editorial-hero">
       <div className="shell">
@@ -47,19 +27,16 @@ export default function Hero() {
               <span><strong>sem comissão</strong> de instituições</span>
             </div>
           </div>
-          <figure className="editorial-hero-art hero-art-frame" aria-label="Prévia animada da análise do Dossiê Expresso: um documento de vidro translúcido cujas camadas se separam revelando marcadores de risco, custos e liquidez em verde.">
-            <video
-              ref={videoRef}
-              className="hero-art-video"
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/images/landing/hero-glass_2.webp"
-              aria-hidden="true"
-            >
-              <source src="/images/landing/glass_video.mp4" type='video/mp4; codecs="hvc1.1.6.L93.B0"' />
-            </video>
+          <figure className="editorial-hero-art hero-art-frame" aria-label="Documento de vidro translúcido com camadas revelando marcadores de análise financeira em verde — a clareza que o Dossiê Expresso entrega.">
+            <Image
+              src="/images/landing/hero-glass_2.webp"
+              alt="Documento de vidro translúcido com camadas revelando marcadores de análise financeira em verde — ilustração da clareza que o Dossiê Expresso entrega."
+              width={1792}
+              height={2400}
+              priority
+              sizes="(max-width: 1024px) 90vw, 460px"
+              className="hero-art-img"
+            />
           </figure>
         </div>
       </div>

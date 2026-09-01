@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import AnalysisShowcase from "./AnalysisShowcase";
 import AudienceFit from "./AudienceFit";
 import ExpressDossier from "./ExpressDossier";
 import FAQ from "./FAQ";
@@ -12,6 +13,7 @@ export default function LandingPage() {
       <Hero />
       <AudienceFit />
       <ExpressDossier />
+      <AnalysisShowcase />
       <MethodTransparency />
       <FAQ />
       <FinalCTA />
