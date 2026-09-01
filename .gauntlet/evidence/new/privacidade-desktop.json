@@ -1,0 +1,148 @@
+{
+  "url": "http://localhost:3000/privacidade",
+  "title": "Aviso de Privacidade | Íntegra",
+  "width": 1440,
+  "docBg": "rgb(247, 248, 247)",
+  "h1Font": "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", Inter, system-ui, sans-serif",
+  "h1Size": "48px",
+  "h1Color": "rgb(16, 36, 29)",
+  "h1Track": "-1.44px",
+  "h1Contrast": "15.27",
+  "h1OnHero": "15.27",
+  "navBg": null,
+  "navPos": null,
+  "overflowX": 0,
+  "allFonts": [
+    "-apple-system"
+  ],
+  "accents": [
+    "#0c5f47"
+  ],
+  "priceFontVariant": null,
+  "facts": [],
+  "buttons": [
+    {
+      "text": "Falar sobre meus dados",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    }
+  ],
+  "imgs": [],
+  "sections": [
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "privacy-warning",
+      "bg": "#e7f0ec"
+    }
+  ],
+  "navLinks": [],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20quero%20exercer%20um%20direito%20relacionado%20aos%20meus%20dados%20pesso",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20quero%20exercer%20um%20direito%20relacionado%20aos%20meus%20dados%20pesso"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Aviso de Privacidade",
+      "size": "48px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "1. Quem trata os dados",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "2. Dados coletados",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "3. Finalidades",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "4. Bases e escolhas",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "5. Compartilhamento e operadores",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "6. Armazenamento e segurança",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "7. Retenção",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "8. Direitos do titular",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "9. Canal de atendimento",
+      "size": "21px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Atualizações deste aviso",
+      "size": "21px",
+      "weight": "700"
+    }
+  ],
+  "errors": []
+}

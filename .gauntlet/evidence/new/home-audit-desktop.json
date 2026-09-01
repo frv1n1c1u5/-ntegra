@@ -1,0 +1,125 @@
+{
+  "url": "http://localhost:3000/",
+  "title": "Dossiê Expresso: clareza antes da decisão",
+  "width": 1440,
+  "docBg": "rgb(247, 248, 247)",
+  "h1Font": "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", Inter, system-ui, sans-serif",
+  "h1Size": "62px",
+  "h1Color": "rgb(16, 36, 29)",
+  "h1Track": "-1.86px",
+  "h1Contrast": "15.27",
+  "h1OnHero": "15.27",
+  "navBg": "rgba(247, 248, 247, 0.86)",
+  "navPos": "fixed",
+  "overflowX": 0,
+  "allFonts": [
+    "-apple-system"
+  ],
+  "accents": [
+    "#0c5f47",
+    "#e7f0ec"
+  ],
+  "priceFontVariant": "tabular-nums",
+  "facts": [
+    {
+      "text": "R$ 229 pagamento único",
+      "color": "#5b6a64"
+    },
+    {
+      "text": "até 48h para a entrega",
+      "color": "#5b6a64"
+    },
+    {
+      "text": "sem comissão de instituições",
+      "color": "#5b6a64"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Falar agora",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    },
+    {
+      "text": "Iniciar no WhatsApp",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    },
+    {
+      "text": "Falar no WhatsApp",
+      "bg": "#ffffff",
+      "color": "#0d2b21",
+      "radius": "8px"
+    }
+  ],
+  "imgs": [],
+  "sections": [
+    {
+      "cls": "editorial-hero",
+      "bg": "#f7f8f7"
+    },
+    {
+      "cls": "editorial-section audience-section",
+      "bg": "#ffffff"
+    },
+    {
+      "cls": "editorial-section dossier-section",
+      "bg": "#eef1ef"
+    },
+    {
+      "cls": "editorial-section transparency-section",
+      "bg": "#ffffff"
+    },
+    {
+      "cls": "editorial-final-cta",
+      "bg": "#0d2b21"
+    }
+  ],
+  "navLinks": [
+    "Soluções",
+    "Método",
+    "Preços",
+    "Blog"
+  ],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Antes de decidir, enxergue o que o produto não con",
+      "size": "62px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Nem toda dúvida financeira pede mais informação. A",
+      "size": "38px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "DossiêExpresso",
+      "size": "48px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "A independência não é um slogan. É o desenho do tr",
+      "size": "38px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Se o produto precisa de mais clareza, comece por u",
+      "size": "38px",
+      "weight": "700"
+    }
+  ],
+  "errors": []
+}

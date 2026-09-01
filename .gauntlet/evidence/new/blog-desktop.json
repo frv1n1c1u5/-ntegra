@@ -1,0 +1,138 @@
+{
+  "url": "http://localhost:3000/blog",
+  "title": "Escudo do Investidor | Íntegra Consultoria | Íntegra",
+  "width": 1440,
+  "docBg": "rgb(247, 248, 247)",
+  "h1Font": "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", Inter, system-ui, sans-serif",
+  "h1Size": "54px",
+  "h1Color": "rgb(16, 36, 29)",
+  "h1Track": "-1.62px",
+  "h1Contrast": "15.27",
+  "h1OnHero": "15.27",
+  "navBg": "rgba(247, 248, 247, 0.86)",
+  "navPos": "fixed",
+  "overflowX": 0,
+  "allFonts": [
+    "-apple-system"
+  ],
+  "accents": [
+    "#0c5f47",
+    "#e7f0ec"
+  ],
+  "priceFontVariant": null,
+  "facts": [],
+  "buttons": [
+    {
+      "text": "Falar agora",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    },
+    {
+      "text": "Preencher triagem",
+      "bg": "#e7f0ec",
+      "color": "#0a4e3a",
+      "radius": "8px"
+    }
+  ],
+  "imgs": [
+    {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Fcoe-perguntas-capa.webp&w=3840&q=75",
+      "w": 460,
+      "h": 306
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Fcoe-perguntas-capa.webp&w=3840&q=75",
+      "w": 380,
+      "h": 253
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Frebate-comissao-capa.webp&w=3840&q=75",
+      "w": 380,
+      "h": 253
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Ffgc-limites-capa.webp&w=3840&q=75",
+      "w": 380,
+      "h": 253
+    }
+  ],
+  "sections": [
+    {
+      "cls": "blog-hero",
+      "bg": "#f7f8f7"
+    },
+    {
+      "cls": "section blog-filter-band",
+      "bg": "#ffffff"
+    },
+    {
+      "cls": "section",
+      "bg": "#000000"
+    },
+    {
+      "cls": "section blog-cta-band",
+      "bg": "#ffffff"
+    }
+  ],
+  "navLinks": [
+    "Soluções",
+    "Método",
+    "Preços",
+    "Blog"
+  ],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Li%20o%20Escudo%20do%20Investidor%20e%20quero%20avaliar%2"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Escudo do Investidor",
+      "size": "54px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "COE: 9 perguntas para fazer antes de assinar",
+      "size": "20px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Decisões financeiras explicadas sem linguagem de v",
+      "size": "40px",
+      "weight": "650"
+    },
+    {
+      "tag": "H2",
+      "text": "Três guias para começar mais protegido.",
+      "size": "40px",
+      "weight": "650"
+    },
+    {
+      "tag": "H3",
+      "text": "COE: 9 perguntas para fazer antes de assinar",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H3",
+      "text": "Rebate e comissão: como descobrir quanto o interme",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H3",
+      "text": "FGC sem confusão: limite, conglomerado e teto de q",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Leu algo parecido com o que aconteceu com você?",
+      "size": "24px",
+      "weight": "700"
+    }
+  ],
+  "errors": []
+}

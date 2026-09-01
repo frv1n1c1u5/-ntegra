@@ -1,0 +1,178 @@
+{
+  "url": "http://localhost:3000/blog/coe-perguntas-antes-de-assinar",
+  "title": "COE: 9 perguntas para fazer antes de assinar | Íntegra Consultoria | Íntegra",
+  "width": 1440,
+  "docBg": "rgb(247, 248, 247)",
+  "h1Font": "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", Inter, system-ui, sans-serif",
+  "h1Size": "46px",
+  "h1Color": "rgb(16, 36, 29)",
+  "h1Track": "-1.38px",
+  "h1Contrast": "15.27",
+  "h1OnHero": "1.29",
+  "navBg": "rgba(247, 248, 247, 0.86)",
+  "navPos": "fixed",
+  "overflowX": 0,
+  "allFonts": [
+    "-apple-system"
+  ],
+  "accents": [
+    "#0c5f47",
+    "#e7f0ec"
+  ],
+  "priceFontVariant": null,
+  "facts": [],
+  "buttons": [
+    {
+      "text": "Falar agora",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    },
+    {
+      "text": "Solicitar análise",
+      "bg": "#e7f0ec",
+      "color": "#0a4e3a",
+      "radius": "8px"
+    }
+  ],
+  "imgs": [
+    {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Fcoe-perguntas-capa.webp&w=3840&q=75",
+      "w": 1060,
+      "h": 706
+    }
+  ],
+  "sections": [
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "",
+      "bg": "#000000"
+    },
+    {
+      "cls": "article-sources",
+      "bg": "#000000"
+    },
+    {
+      "cls": "article-next",
+      "bg": "#ffffff"
+    }
+  ],
+  "navLinks": [
+    "Método",
+    "Preços",
+    "Blog"
+  ],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Li%20um%20artigo%20no%20Escudo%20do%20Investidor%20e%20qu"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "COE: 9 perguntas para fazer antes de assinar",
+      "size": "46px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "1. O capital é protegido em qual situação?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "2. Quem é o emissor e qual risco estou assumindo?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "3. Qual é exatamente a regra de remuneração?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "4. Existem barreiras ou condições intermediárias?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "5. Existe limite para o ganho?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "6. Qual é o pior resultado possível?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "7. Há liquidez antes do vencimento?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "8. Quanto a instituição e o profissional recebem?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "9. O produto combina com meu objetivo e meu prazo?",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Checklist antes do aceite",
+      "size": "26px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Documentos oficiais",
+      "size": "22px",
+      "weight": "700"
+    }
+  ],
+  "errors": []
+}

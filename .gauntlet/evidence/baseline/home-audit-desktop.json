@@ -1,0 +1,132 @@
+{
+  "url": "http://localhost:3000/",
+  "title": "Dossiê Expresso: clareza antes da decisão",
+  "width": 1440,
+  "docBg": "rgb(255, 255, 255)",
+  "h1Font": "Georgia, \"Times New Roman\", serif",
+  "h1Size": "92px",
+  "h1Color": "rgb(8, 22, 18)",
+  "h1Track": "-5.06px",
+  "h1Contrast": "18.52",
+  "h1OnHero": "16.87",
+  "navBg": "rgba(247, 244, 238, 0.91)",
+  "navPos": "fixed",
+  "overflowX": 0,
+  "allFonts": [
+    "\"Segoe UI Variable\"",
+    "Georgia"
+  ],
+  "accents": [
+    "#102d24",
+    "#f4ead5"
+  ],
+  "priceFontVariant": "normal",
+  "facts": [
+    {
+      "text": "R$ 229 pagamento único",
+      "color": "#596960"
+    },
+    {
+      "text": "até 48h para a entrega",
+      "color": "#596960"
+    },
+    {
+      "text": "sem comissão de instituições",
+      "color": "#596960"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Falar agora",
+      "bg": "#102d24",
+      "color": "#ffffff",
+      "radius": "999px"
+    },
+    {
+      "text": "Iniciar no WhatsApp",
+      "bg": "#102d24",
+      "color": "#ffffff",
+      "radius": "999px"
+    },
+    {
+      "text": "Falar no WhatsApp",
+      "bg": "#f4ead5",
+      "color": "#102d24",
+      "radius": "999px"
+    }
+  ],
+  "imgs": [
+    {
+      "src": "/_next/image?url=%2Fimages%2Flanding%2Fintegra-dossie-editorial.png&w=3840&q=75",
+      "w": 748,
+      "h": 499
+    }
+  ],
+  "sections": [
+    {
+      "cls": "editorial-hero",
+      "bg": "#f7f4ee"
+    },
+    {
+      "cls": "editorial-section audience-section",
+      "bg": "#ffffff"
+    },
+    {
+      "cls": "editorial-section dossier-section",
+      "bg": "#102d24"
+    },
+    {
+      "cls": "editorial-section transparency-section",
+      "bg": "#e9e3d6"
+    },
+    {
+      "cls": "editorial-final-cta",
+      "bg": "#0a1713"
+    }
+  ],
+  "navLinks": [
+    "Soluções",
+    "Método",
+    "Preços",
+    "Blog"
+  ],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Antes de decidir, enxergue o que o produto não con",
+      "size": "92px",
+      "weight": "500"
+    },
+    {
+      "tag": "H2",
+      "text": "Nem toda dúvida financeira pede mais informação. A",
+      "size": "64.8px",
+      "weight": "500"
+    },
+    {
+      "tag": "H2",
+      "text": "DossiêExpresso",
+      "size": "108px",
+      "weight": "500"
+    },
+    {
+      "tag": "H2",
+      "text": "A independência não é um slogan. É o desenho do tr",
+      "size": "64.8px",
+      "weight": "500"
+    },
+    {
+      "tag": "H2",
+      "text": "Se o produto precisa de mais clareza, comece por u",
+      "size": "71px",
+      "weight": "500"
+    }
+  ],
+  "errors": []
+}

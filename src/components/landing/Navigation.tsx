@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, MessageCircle, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { trackConversion } from "@/lib/analytics";
 import { qualifiedWhatsAppUrl } from "@/lib/contact";
 
@@ -16,11 +16,18 @@ const navLinks = [
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const isActive = (href: string) => pathname === href || (href === "/blog" && pathname.startsWith("/blog/"));
 
   return <>
-    <nav className={`nav editorial-nav ${mobileOpen ? "nav-open" : ""}`} aria-label="Navegação principal">
+    <nav className={`nav editorial-nav ${scrolled ? "nav-scrolled" : ""} ${mobileOpen ? "nav-open" : ""}`} aria-label="Navegação principal">
       <div className="shell nav-inner">
         <Link className="brand" href="/" onClick={() => setMobileOpen(false)} aria-label="Íntegra, página inicial">
           <span className="brand-mark" aria-hidden="true">Í</span><span className="brand-name"><strong>Íntegra</strong><small>Leitura independente</small></span>

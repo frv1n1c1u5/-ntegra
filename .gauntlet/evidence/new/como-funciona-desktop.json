@@ -1,0 +1,103 @@
+{
+  "url": "http://localhost:3000/como-funciona",
+  "title": "Como funciona | Íntegra Consultoria | Íntegra",
+  "width": 1440,
+  "docBg": "rgb(247, 248, 247)",
+  "h1Font": "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", Inter, system-ui, sans-serif",
+  "h1Size": "54px",
+  "h1Color": "rgb(16, 36, 29)",
+  "h1Track": "-1.62px",
+  "h1Contrast": "15.27",
+  "navBg": "rgba(247, 248, 247, 0.86)",
+  "navPos": "fixed",
+  "overflowX": 0,
+  "allFonts": [
+    "-apple-system"
+  ],
+  "accents": [
+    "#0c5f47",
+    "#e7f0ec"
+  ],
+  "priceFontVariant": null,
+  "facts": [],
+  "buttons": [
+    {
+      "text": "Falar agora",
+      "bg": "#0c5f47",
+      "color": "#ffffff",
+      "radius": "8px"
+    },
+    {
+      "text": "Enviar triagem pelo WhatsApp",
+      "bg": "#e7f0ec",
+      "color": "#0a4e3a",
+      "radius": "8px"
+    }
+  ],
+  "imgs": [],
+  "sections": [
+    {
+      "cls": "section section-muted",
+      "bg": "#eef1ef"
+    },
+    {
+      "cls": "section lead-band",
+      "bg": "#eef1ef"
+    }
+  ],
+  "navLinks": [
+    "Soluções",
+    "Método",
+    "Preços",
+    "Blog"
+  ],
+  "ctaHrefs": [
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20",
+    "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar%20o%20Dossi%C3%AA%20Expresso%20(R%24%20"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "A análise começa pela pergunta certa.",
+      "size": "54px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Um processo curto para transformar ruído em plano ",
+      "size": "40px",
+      "weight": "650"
+    },
+    {
+      "tag": "H3",
+      "text": "Triagem",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H3",
+      "text": "Diagnóstico",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H3",
+      "text": "Relatório",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H3",
+      "text": "Suporte",
+      "size": "16.5px",
+      "weight": "700"
+    },
+    {
+      "tag": "H2",
+      "text": "Conte o caso em poucos minutos.",
+      "size": "40px",
+      "weight": "650"
+    }
+  ],
+  "errors": []
+}
