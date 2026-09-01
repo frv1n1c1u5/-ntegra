@@ -1,5 +1,5 @@
 
-const puppeteer = require('D:/OpenDesign/resources/app/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js');
+const puppeteer = await import('D:/OpenDesign/resources/app/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js');
 (async () => {
   const b = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/EdgeCore/151.0.4129.107/msedge.exe', headless: 'new', defaultViewport: { width: 1440, height: 900 } });
   const p = await b.newPage();

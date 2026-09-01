@@ -1,0 +1,366 @@
+{
+  "/": {
+    "h1": {
+      "text": "Antes de decidir, enxergue o que o produto não contou.",
+      "font": "-apple-system",
+      "size": "62px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.86px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": true,
+    "fortyEight": true,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 905,
+        "h": 905
+      },
+      "h1Top": 226,
+      "ctaTop": 10
+    },
+    "cardInfo": {
+      "border": "0px none rgb(16, 36, 29)",
+      "radius": "0px",
+      "shadow": "none",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "hairlineCount": 1,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/solucoes": {
+    "h1": {
+      "text": "O problema precisa de uma leitura melhor antes de uma reação maior.",
+      "font": "-apple-system",
+      "size": "54px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.62px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": false,
+    "fortyEight": true,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 543,
+        "h": 543
+      },
+      "h1Top": 226,
+      "ctaTop": 10
+    },
+    "cardInfo": {
+      "border": "1px solid rgba(16, 36, 29, 0.12)",
+      "radius": "12px",
+      "shadow": "none",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "hairlineCount": 5,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/como-funciona": {
+    "h1": {
+      "text": "A análise começa pela pergunta certa.",
+      "font": "-apple-system",
+      "size": "54px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.62px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": false,
+    "fortyEight": true,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 486,
+        "h": 486
+      },
+      "h1Top": 226,
+      "ctaTop": 10
+    },
+    "cardInfo": null,
+    "hairlineCount": 2,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/precos": {
+    "h1": {
+      "text": "Comece com um escopo claro, não com uma promessa vaga.",
+      "font": "-apple-system",
+      "size": "54px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.62px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Quero%20solicitar",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": true,
+    "fortyEight": true,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 543,
+        "h": 543
+      },
+      "h1Top": 226,
+      "ctaTop": 10
+    },
+    "cardInfo": {
+      "border": "1px solid rgb(12, 95, 71)",
+      "radius": "12px",
+      "shadow": "rgb(12, 95, 71) 0px 0px 0px 1px, rgba(16, 36, 29, 0.05) 0px 1px 2px 0px, rgba(16, 36, 29, 0.08) 0px 10px 30px 0px",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "hairlineCount": 5,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/blog": {
+    "h1": {
+      "text": "Escudo do Investidor",
+      "font": "-apple-system",
+      "size": "54px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.62px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Li%20o%20Escudo%2",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": true,
+    "fortyEight": false,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 799,
+        "h": 799
+      },
+      "h1Top": 403,
+      "ctaTop": 10
+    },
+    "cardInfo": {
+      "border": "1px solid rgba(16, 36, 29, 0.12)",
+      "radius": "12px",
+      "shadow": "none",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "hairlineCount": 5,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/blog/coe-perguntas-antes-de-assinar": {
+    "h1": {
+      "text": "COE: 9 perguntas para fazer antes de assinar",
+      "font": "-apple-system",
+      "size": "46px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.38px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": "rgba(247, 248, 247, 0.86)",
+    "navBlur": "blur(14px)",
+    "navBorder": "rgba(16, 36, 29, 0.12) 1px",
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20%C3%8Dntegra.%20Li%20um%20artigo%",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": false,
+    "fortyEight": false,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 487,
+        "h": 487
+      },
+      "h1Top": 218,
+      "ctaTop": 10
+    },
+    "cardInfo": null,
+    "hairlineCount": 1,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/privacidade": {
+    "h1": {
+      "text": "Aviso de Privacidade",
+      "font": "-apple-system",
+      "size": "48px",
+      "weight": "700",
+      "color": "rgb(16, 36, 29)",
+      "bg": "rgb(247, 248, 247)",
+      "tracking": "-1.44px",
+      "radius": "0px",
+      "contrast": "15.27"
+    },
+    "navBg": null,
+    "navBlur": null,
+    "navBorder": null,
+    "ctas": [
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20quero%20exercer%20um%20direito%20",
+        "hasOnClick": false
+      },
+      {
+        "href": "https://wa.me/5551999381379?text=Ol%C3%A1%2C%20quero%20exercer%20um%20direito%20",
+        "hasOnClick": false
+      }
+    ],
+    "priceVisible": false,
+    "fortyEight": false,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 397,
+        "h": 397
+      },
+      "h1Top": 253,
+      "ctaTop": 657
+    },
+    "cardInfo": null,
+    "hairlineCount": 0,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "/entrar": {
+    "h1": {
+      "text": "Clareza para conduzir cada caso.",
+      "font": "-apple-system",
+      "size": "44px",
+      "weight": "700",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgb(4, 16, 12)",
+      "tracking": "-1.32px",
+      "radius": "0px",
+      "contrast": "19.36"
+    },
+    "navBg": null,
+    "navBlur": null,
+    "navBorder": null,
+    "ctas": [],
+    "priceVisible": false,
+    "fortyEight": false,
+    "overflowX": 0,
+    "fold": {
+      "hero": {
+        "top": 0,
+        "bottom": 900,
+        "h": 900
+      },
+      "h1Top": 420
+    },
+    "cardInfo": null,
+    "hairlineCount": 0,
+    "bodyBg": "rgb(247, 248, 247)",
+    "errors": []
+  },
+  "scrollFaq": {
+    "navBefore": "rgba(247, 248, 247, 0.86)",
+    "navAfter": "rgba(247, 248, 247, 0.94)",
+    "navClass": "nav editorial-nav nav-scrolled ",
+    "faqBefore": "false",
+    "faqAfter": "true",
+    "panelMaxH": "200px",
+    "overflowX": 0
+  },
+  "mobile": {
+    "menuBefore": "ABSENT",
+    "menuAfter": "block",
+    "convBar": "flex",
+    "convBarPos": "fixed",
+    "h1Top": 194,
+    "h1Size": "42px",
+    "overflowX": 0
+  }
+}
