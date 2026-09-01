@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
 import { trackConversion } from "@/lib/analytics";
@@ -26,25 +27,16 @@ export default function Hero() {
               <span><strong>sem comissão</strong> de instituições</span>
             </div>
           </div>
-          <figure className="editorial-hero-art" aria-hidden="true">
-            <div className="hero-card">
-              <div className="hero-card-head">
-                <span className="hero-card-badge">Dossiê Expresso</span>
-                <span className="hero-card-status"><span className="pulse" /> em análise · 48h</span>
-              </div>
-              <p className="hero-card-title">COE — CDC Rendimento Alto</p>
-              <div className="hero-card-rows">
-                <div className="hero-card-row"><span>Riscos mapeados</span><strong>7 itens</strong></div>
-                <div className="hero-card-row"><span>Custos implícitos</span><strong>R$ 1.240</strong></div>
-                <div className="hero-card-row"><span>Liquidez</span><strong>resgate em 2 anos</strong></div>
-                <div className="hero-card-row"><span>Incentivo comercial</span><strong>avaliado</strong></div>
-              </div>
-              <div className="hero-card-foot">
-                <div><span>Análise independente</span><strong className="hero-card-price">R$ 229</strong></div>
-                <span className="hero-card-chip">Sem comissão</span>
-              </div>
-            </div>
-            <span className="hero-card-float">entrega em 48h</span>
+          <figure className="editorial-hero-art hero-art-frame" aria-label="Ilustração de um documento de vidro translúcido com camadas revelando análises financeiras destacadas em verde">
+            <Image
+              src="/images/landing/hero-glass_2.webp"
+              alt="Documento de vidro translúcido com camadas revelando marcadores de análise financeira em verde — ilustração da clareza que o Dossiê Expresso entrega."
+              width={1792}
+              height={2400}
+              priority
+              sizes="(max-width: 1024px) 90vw, 460px"
+              className="hero-art-img"
+            />
           </figure>
         </div>
       </div>
