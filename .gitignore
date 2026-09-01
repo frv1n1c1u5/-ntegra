@@ -5,3 +5,6 @@ out
 dist
 .env*.local
 npm-debug.log*
+
+# TypeScript incremental
+tsconfig.tsbuildinfo
